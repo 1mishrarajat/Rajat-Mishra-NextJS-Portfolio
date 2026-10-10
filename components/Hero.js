@@ -6,7 +6,7 @@ export default function Hero() {
   return (
 <section
   id="home"
-  className="noise grid-paper relative isolate min-h-screen overflow-hidden bg-[#f8f5ef] pt-28 sm:pt-32 lg:pt-24"
+  className="noise grid-paper relative isolate min-h-screen overflow-hidden bg-[#f8f5ef] pt-12 sm:pt-32 lg:pt-24"
 >
   {/* Decorative background */}
   <div
@@ -36,16 +36,14 @@ export default function Hero() {
         Hello, I&apos;m Rajat Mishra <span className="ml-1">✦</span>
       </p>
 
-      <h1 className="display-font reveal-up capitalize max-w-full text-[clamp(3rem,7.1vw,6.8rem)] font-medium leading-[0.94] tracking-[-0.055em]">
-        <span className="block whitespace-nowrap">
-          I build digital
-        </span>
-        <span className="mt-1 block whitespace-nowrap italic text-[#b65c3a]">
-          Solutions.
-        </span>
-      </h1>
+     <h1 className="display-font reveal-up max-w-full whitespace-nowrap text-[clamp(1.65rem,9.1vw,6.8rem)] font-medium leading-[0.94] tracking-[-0.055em] capitalize sm:whitespace-normal">
+  I build digital{" "}
+  <span className="italic text-[#b65c3a]">
+    Solutions.
+  </span>
+</h1>
 
-      <p className="reveal-up mt-7 max-w-xl text-[17px] leading-7 text-[#69655e] text-justify capitalize sm:mt-8 sm:leading-8">
+      <p className="reveal-up mt-7 max-w-xl text-[15px] md:text-[17px] leading-7 text-[#69655e] text-justify capitalize sm:mt-8 sm:leading-8">
         Full Stack Developer building modern, responsive web applications with intuitive frontend interfaces and reliable backend systems.
       </p>
 
@@ -53,7 +51,7 @@ export default function Hero() {
       <div className="reveal-up mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
         <a
           href="#projects"
-          className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#171717] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:bg-[#b65c3a] hover:shadow-xl"
+          className="group inline-flex min-h-14 items-center capitalize  justify-center gap-3 rounded-full bg-[#171717] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:bg-[#b65c3a] hover:shadow-xl"
         >
           Explore my work
           <ArrowUpRight
@@ -64,7 +62,7 @@ export default function Hero() {
 
         <a
           href="mailto:rajatmishra74150@gmail.com"
-          className="inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full border border-black/10 bg-white/60 px-7 py-4 text-sm font-semibold text-[#171717] transition duration-300 hover:-translate-y-1 hover:border-black/20 hover:bg-white"
+          className="inline-flex min-h-14 items-center capitalize  justify-center gap-2.5 rounded-full border border-black/10 bg-white/60 px-7 py-4 text-sm font-semibold text-[#171717] transition duration-300 hover:-translate-y-1 hover:border-black/20 hover:bg-white"
         >
           <Mail size={17} />
           Let&apos;s connect
@@ -124,7 +122,7 @@ export default function Hero() {
         </div>
 
         {/* Floating experience card */}
-        <div className="absolute -bottom-5 right-3 z-20 flex items-center gap-3 rounded-2xl border border-white/70 bg-white/90 p-3.5 shadow-xl shadow-black/10 backdrop-blur-xl sm:-right-6 sm:bottom-8 sm:p-4">
+        <div className="absolute -bottom-5 right-3 z-20 flex items-center gap-3 rounded-2xl border border-white/70 bg-white/90 md:p-3.5 p-2 shadow-xl shadow-black/10 backdrop-blur-xl sm:-right-6 sm:bottom-8 sm:p-4">
           <div className="grid h-11 w-11 place-items-center rounded-xl bg-[#b65c3a]/10 text-[#b65c3a]">
             <Code2 size={22} />
           </div>
@@ -132,7 +130,7 @@ export default function Hero() {
             <p className="text-lg font-bold leading-tight text-[#171717]">
               1.9+ years
             </p>
-            <p className="mt-1 text-[14px] text-[#b65c3a] font-bold">
+            <p className="mt-1 capitalize text-[14px] text-[#b65c3a] font-bold">
               Built to Perform.
             </p>
           </div>

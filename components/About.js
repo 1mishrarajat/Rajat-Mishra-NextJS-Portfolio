@@ -73,15 +73,15 @@ export default function About() {
         </div>
 
         {/* Heading */}
-        <h2 className="display-font leading-[1.2] max-w-3xl  text-[#171717] text-[3.2rem]">
+        <h2 className="display-font leading-[1.2] max-w-3xl  text-[#171717] text-[2rem] md:text-[3.5rem]">
          End-to-End Development.
-          <span className="mt-2 block font-serif italic font-medium text-[#b65c3a]">
+          <span className="mt-2 block font-serif italic font-medium text-[2.5rem] md:text-[3.5rem] text-[#b65c3a]">
             Built With Purpose.
           </span>
         </h2>
 
         {/* Description */}
-        <p className="mt-4 max-w-2xl text-[17px] text-justify  capitalize leading-8 text-[#69635d] sm:leading-9">
+        <p className="mt-4 max-w-2xl text-[16px] md:text-[17px] text-justify  capitalize leading-8 text-[#69635d] sm:leading-9">
           I combine frontend expertise with backend development to build modern, responsive web applications. I focus on clean code, intuitive user experiences, and reliable solutions that solve real-world problems
         </p>
 
@@ -145,7 +145,7 @@ export default function About() {
                 )}
               </div>
 
-              <div>
+              <div className="flex items-center gap-3 sm:block">
                 <div className="display-font text-3xl leading-none text-[#171717] sm:text-4xl">
                   {number}
                 </div>
@@ -162,27 +162,32 @@ export default function About() {
         {/* =================================================
             BOTTOM HIGHLIGHT
         ================================================= */}
-        <div className="mt-8 flex items-center gap-5 rounded-2xl border border-[#e8ddd3] bg-white/70 px-6 py-5 shadow-[0_10px_35px_rgba(55,35,20,0.04)] sm:px-7">
+    <div className="mt-8 flex items-start gap-3 rounded-2xl border border-[#e8ddd3] bg-white/70 px-4 py-4 shadow-[0_10px_35px_rgba(55,35,20,0.04)] sm:items-center sm:gap-5 sm:px-7 sm:py-5">
 
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f7e8dc] text-[#b65c3a]">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              className="h-5 w-5"
-            >
-              <path d="M9 18h6M10 22h4" />
-              <path d="M8.5 14.5a7 7 0 1 1 7 0c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5Z" />
-            </svg>
-          </div>
+  {/* Icon */}
+  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f7e8dc] text-[#b65c3a] sm:h-12 sm:w-12">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      className="h-5 w-5"
+      aria-hidden="true"
+    >
+      <path d="M9 18h6M10 22h4" />
+      <path d="M8.5 14.5a7 7 0 1 1 7 0c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5Z" />
+    </svg>
+  </div>
 
-          <div className="h-10 w-px bg-[#ded2c7]" />
+  {/* Divider */}
+  <div className="mt-1 h-10 w-px shrink-0 bg-[#ded2c7] sm:mt-0" />
 
-          <p className="text-[17px] capitalize text-justify leading-6 text-[#5f5953]  sm:leading-7">
-            I focus on building digital experiences that are useful, accessible, responsive, and ready for real-world impact.
-          </p>
-        </div>
+  {/* Text */}
+  <p className="min-w-0 flex-1 text-left capitalize  text-sm leading-6 text-[#5f5953] sm:text-[17px] sm:leading-7">
+    I focus on building digital experiences that are useful, accessible,
+    responsive, and ready for real-world impact.
+  </p>
+</div>
 
       </div>
     </div>
