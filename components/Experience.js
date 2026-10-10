@@ -20,7 +20,7 @@ export default function Experience() {
         </p>
       </div>
 
-      <h2 className="display-font text-4xl leading-[1.05] tracking-[-0.045em] text-[#171717] sm:text-5xl lg:text-6xl">
+      <h2 className="display-font whitespace-nowrap text-[40px] leading-[1.05] tracking-[-0.045em] text-[#171717] sm:text-5xl lg:text-6xl">
         The journey{" "}
         <span className="font-serif font-medium italic text-[#b65c3a]">
           so far.

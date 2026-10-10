@@ -173,14 +173,14 @@ export default function Projects() {
           </p>
         </div>
 
-        <h2 className="display-font text-5xl leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[5rem]">
+        <h2 className="display-font text-[40px] leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[5rem]">
           Selected Work
           <span className="mt-1 block font-serif font-medium italic text-[#b65c3a]">
             Built with purpose.
           </span>
         </h2>
 
-        <p className="mt-5 max-w-xl text-sm leading-7 text-white/55 sm:text-base">
+        <p className="mt-5 max-w-xl text-sm  leading-7 text-white/55 sm:text-base">
           A selection of web applications and digital experiences I've built
           using modern frontend technologies, backend systems, and CMS platforms.
         </p>
@@ -368,7 +368,7 @@ export default function Projects() {
     )}
 
     {/* Bottom summary */}
-    <div className="mt-7 capialize flex flex-col gap-3 text-xs leading-6 text-white/40 sm:flex-row sm:items-center sm:justify-between">
+    <div className="hidden mt-7 flex-col gap-3 text-xs leading-6 text-white/40 sm:flex sm:flex-row sm:items-center sm:justify-between">
       <span className ="capitalize tracking-[0.12em]">
         Selected projects across web development, e-commerce, and custom applications.
       </span>

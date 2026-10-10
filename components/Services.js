@@ -43,7 +43,7 @@ export default function Services() {
           </p>
         </div>
 
-       <h2 className="display-font text-4xl leading-tight tracking-[-0.045em] text-[#171717] sm:text-5xl lg:text-6xl">
+       <h2 className="display-font text-[28px] leading-tight tracking-[-0.045em] text-[#171717] sm:text-5xl lg:text-6xl">
   What I Bring{" "}
   <span className="font-serif font-medium italic text-[#b65c3a]">
     To Every Project.
@@ -110,7 +110,7 @@ export default function Services() {
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b65c3a]">
           Have a project in mind?
         </p>
-        <h3 className="mt-2 font-serif text-2xl tracking-tight text-[#171717] sm:text-3xl">
+        <h3 className="mt-2 font-serif text-[20px] capitalize tracking-tight text-[#171717] sm:text-3xl">
           Let's build something meaningful.
         </h3>
       </div>

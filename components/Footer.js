@@ -15,7 +15,7 @@ export default function Footer() {
       {/* Quick links */}
       <nav
         aria-label="Footer navigation"
-        className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[15px] text-[#655d55]"
+        className=" hidden flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[15px] text-[#655d55] sm:flex"
       >
         <a href="/" className="transition-colors hover:text-[#b65c3a]">
           Home
@@ -35,7 +35,7 @@ export default function Footer() {
       </nav>
 
       {/* Built with */}
-      <p className="text-center text-[15px] capitalize text-[#71685f] sm:text-right">
+      <p className="hidden md:block text-center text-[15px] capitalize text-[#71685f] sm:text-right">
         Designed & built with{" "}
         <span className="font-semibold text-[#b65c3a]">Next.js</span>
         {" "}+{" "}

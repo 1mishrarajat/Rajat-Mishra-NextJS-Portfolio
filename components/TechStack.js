@@ -25,7 +25,7 @@ export default function TechStack() {
           </span>
         </div>
 
-        <h2 className="display-font text-4xl leading-tight tracking-[-0.045em] text-[#171717] sm:text-5xl lg:text-6xl">
+        <h2 className="display-font text-3xl leading-tight tracking-[-0.045em] text-[#171717] sm:text-5xl lg:text-6xl">
           Technologies I
           <span className="ml-2 font-serif font-medium italic text-[#b65c3a]">
             work with.

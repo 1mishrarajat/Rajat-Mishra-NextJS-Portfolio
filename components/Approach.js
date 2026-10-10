@@ -27,7 +27,7 @@ export default function Approach() {
           </p>
         </div>
 
-     <h2 className="display-font max-w-lg text-[55px] leading-[0.95] tracking-[-0.04em]">
+     <h2 className="display-font max-w-lg text-[50px]  md:text-[55px] leading-[0.95] tracking-[-0.04em]">
   How I turn{" "}
   <span className="font-serif italic font-medium text-[#b65c3a]">
     ideas into experiences.
