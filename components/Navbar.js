@@ -53,31 +53,35 @@ export default function Navbar() {
         </a>
 
         {/* Centered Animated Badge — Mobile Only */}
-        <div className="absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 md:hidden">
-          <div className="available-badge group relative inline-flex items-center gap-2.5 whitespace-nowrap rounded-full border border-[#b65c3a]/20 bg-gradient-to-r from-[#fffaf5] via-[#fff4eb] to-[#fffaf5] px-3 py-2 shadow-[0_5px_20px_rgba(182,92,58,0.14),inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 hover:border-[#b65c3a]/40 hover:shadow-[0_8px_28px_rgba(182,92,58,0.22)] sm:px-4 sm:py-2.5">
+  {/* Centered Animated Badge — Mobile Only */}
+<div className="absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 md:hidden">
+  <a
+    href="/contact"
+    aria-label="Available for work — Contact Rajat Mishra"
+    className="available-badge group relative inline-flex cursor-pointer items-center gap-2.5 whitespace-nowrap rounded-full border border-[#b65c3a]/20 bg-gradient-to-r from-[#fffaf5] via-[#fff4eb] to-[#fffaf5] px-3 py-2 shadow-[0_5px_20px_rgba(182,92,58,0.14),inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 hover:border-[#b65c3a]/40 hover:shadow-[0_8px_28px_rgba(182,92,58,0.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b65c3a] sm:px-4 sm:py-2.5"
+  >
+    {/* Animated Briefcase Icon */}
+    <span className="badge-icon relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#b65c3a]/10 text-[#b65c3a]">
+      <span className="icon-pulse absolute inset-0 rounded-full bg-[#b65c3a]/15" />
 
-            {/* Animated Briefcase Icon */}
-            <span className="badge-icon relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#b65c3a]/10 text-[#b65c3a]">
-              <span className="icon-pulse absolute inset-0 rounded-full bg-[#b65c3a]/15" />
+      <BriefcaseBusiness
+        size={16}
+        strokeWidth={2}
+        className="relative z-10"
+      />
+    </span>
 
-              <BriefcaseBusiness
-                size={16}
-                strokeWidth={2}
-                className="relative z-10"
-              />
-            </span>
+    {/* Badge Text */}
+    <span className="whitespace-nowrap text-[15px] font-semibold tracking-[-0.02em] text-[#8f452d]">
+      Available for work
+    </span>
 
-            {/* Badge Text */}
-            <span className="whitespace-nowrap text-[15px] font-semibold tracking-[-0.02em] text-[#8f452d]">
-              Available for work
-            </span>
-
-            {/* Animated Shine */}
-            <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-full">
-              <span className="badge-shine absolute left-[-50%] top-0 h-full w-1/3 skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/80 to-transparent" />
-            </span>
-          </div>
-        </div>
+    {/* Animated Shine */}
+    <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-full">
+      <span className="badge-shine absolute left-[-50%] top-0 h-full w-1/3 skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+    </span>
+  </a>
+</div>
 
         {/* Mobile Menu Button */}
         <button
