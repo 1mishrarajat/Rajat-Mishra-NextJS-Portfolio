@@ -73,12 +73,12 @@ export default function About() {
         </div>
 
         {/* Heading */}
-        <h2 className="display-font leading-[1.2] max-w-3xl  text-[#171717] text-[2rem] md:text-[3.5rem]">
-         End-to-End Development.
-          <span className="mt-2 block font-serif italic font-medium text-[2.5rem] md:text-[3.5rem] text-[#b65c3a]">
-            Built With Purpose.
-          </span>
-        </h2>
+      <h2 className="display-font max-w-3xl text-[30px] leading-[1.2] text-[#171717] md:text-[3.5rem]">
+  End-to-End Development.
+  <span className="mt-2 block font-serif text-[30px] font-medium italic leading-[1.2] text-[#b65c3a] md:text-[3.5rem]">
+    Built With Purpose.
+  </span>
+</h2>
 
         {/* Description */}
         <p className="mt-4 max-w-2xl text-[16px] md:text-[17px] text-justify  capitalize leading-8 text-[#69635d] sm:leading-9">
