@@ -159,36 +159,12 @@ export default function About() {
         </div>
 
 
-        {/* =================================================
-            BOTTOM HIGHLIGHT
-        ================================================= */}
-    <div className="mt-8 flex items-start gap-3 rounded-2xl border border-[#e8ddd3] bg-white/70 px-4 py-4 shadow-[0_10px_35px_rgba(55,35,20,0.04)] sm:items-center sm:gap-5 sm:px-7 sm:py-5">
 
-  {/* Icon */}
-  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f7e8dc] text-[#b65c3a] sm:h-12 sm:w-12">
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-      className="h-5 w-5"
-      aria-hidden="true"
-    >
-      <path d="M9 18h6M10 22h4" />
-      <path d="M8.5 14.5a7 7 0 1 1 7 0c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5Z" />
-    </svg>
-  </div>
-
-  {/* Divider */}
-  <div className="mt-1 h-10 w-px shrink-0 bg-[#ded2c7] sm:mt-0" />
-
-  {/* Text */}
-  <p className="min-w-0 flex-1 text-left capitalize  text-sm leading-6 text-[#5f5953] sm:text-[17px] sm:leading-7">
-    I focus on building digital experiences that are useful, accessible,
-    responsive, and ready for real-world impact.
-  </p>
-</div>
-
+        <div className="mt-7">
+          <a href="/about" className="inline-flex items-center gap-2 rounded-full bg-[#171717] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b65c3a]">
+            More about me <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
