@@ -35,7 +35,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item}
-              href={`/${item.toLowerCase()}`}
+              href={item === "Projects" ? "/project" : `/${item.toLowerCase()}`}
               className="transition-colors duration-300 hover:text-[#b65c3a]"
             >
               {item}
@@ -105,7 +105,7 @@ export default function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item}
-                href={`/${item.toLowerCase()}`}
+                href={item === "Projects" ? "/project" : `/${item.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
                 className="border-b border-black/10 pb-3 transition-colors duration-300 hover:text-[#b65c3a]"
               >

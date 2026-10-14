@@ -167,7 +167,7 @@ export default function AboutPage() {
   </span>
 
   <span className="text-[13px] font-semibold tracking-[0.02em] text-[#51443B] sm:text-sm">
-    Full Stack Developer
+    Full Stack Web Developer
   </span>
 </div>
 
@@ -338,7 +338,7 @@ export default function AboutPage() {
       </div>
 
       <a
-        href="/projects"
+        href="/project"
         className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full border border-[#DCCFC3] bg-white/60 px-5 py-3 text-sm font-semibold text-[#292521] transition-all duration-300 hover:border-[#B65C3A] hover:bg-[#B65C3A] hover:text-white"
       >
         Explore all projects

@@ -23,7 +23,7 @@ export default function Footer() {
         <a href="/about" className="transition-colors hover:text-[#b65c3a]">
           About
         </a>
-        <a href="/projects" className="transition-colors hover:text-[#b65c3a]">
+        <a href="/project" className="transition-colors hover:text-[#b65c3a]">
           Projects
         </a>
         <a href="/experience" className="transition-colors hover:text-[#b65c3a]">

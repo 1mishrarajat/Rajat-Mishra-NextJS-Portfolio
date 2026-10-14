@@ -44,7 +44,7 @@ export default function Hero() {
 </h1>
 
       <p className="reveal-up mt-7 max-w-xl text-[15px] md:text-[17px] leading-7 text-[#69655e] text-justify capitalize sm:mt-8 sm:leading-8">
-        Full Stack Developer building modern, responsive web applications with intuitive frontend interfaces and reliable backend systems.
+        Full Stack Web Developer building modern, responsive web applications with intuitive frontend interfaces and reliable backend systems.
       </p>
 
       {/* Action buttons */}
@@ -108,7 +108,7 @@ export default function Hero() {
           <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
             <div className="mb-3 flex items-center gap-2">
               <span className="rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
-                FULL STACK DEVELOPER
+                FULL STACK WEB DEVELOPER
               </span>
             </div>
 
