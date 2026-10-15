@@ -14,7 +14,7 @@ const pages = {
   experience: Experience,
   contact: Contact,
 };
-
+  
 export function generateStaticParams() {
   return Object.keys(pages).map((slug) => ({ slug }));
 }
