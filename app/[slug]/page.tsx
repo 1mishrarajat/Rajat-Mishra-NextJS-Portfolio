@@ -8,10 +8,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const pages = {
-  about: About,
+  abouts: About,
   services: Services,
   projects: Projects,
-  experience: Experience,
+  experience: Experience,  
   contact: Contact,
 };
   
