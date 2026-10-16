@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItems = ["About", "Services", "Projects", "Experience", "Contact"];
+  const navItems = ["About", "Services", "Projects", "Experience", "Contact", "Blog"];
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-black/5 bg-[#f8f5ef]/90 backdrop-blur-xl">
