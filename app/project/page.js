@@ -75,20 +75,7 @@ export default function ProjectPage() {
           ))}
         </div>
 
-        {/* CTA */}
-        <a
-          href="#projects"
-          className="group mt-9 inline-flex items-center gap-4"
-        >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#B65C3A] text-xl text-white shadow-lg shadow-[#B65C3A]/15 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#20201E]">
-            →
-          </span>
-          <span className="text-sm font-semibold text-[#292521] transition-colors group-hover:text-[#B65C3A]">
-            Explore my work
-          </span>
-          <span className="h-px w-10 bg-[#C9A994] transition-all duration-300 group-hover:w-16" />
-        </a>
-      </div>
+      </div>  
 
       {/* RIGHT VISUAL SHOWCASE */}
       <div className="relative mx-auto w-full max-w-[500px] lg:ml-auto">
@@ -161,7 +148,7 @@ export default function ProjectPage() {
 
         <section className="border-y border-[#E9DED4] bg-[#F5EDE5] py-12 sm:py-16">
           <div className="container-page grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
-            <div className="max-w-2xl"><div className="flex items-center gap-2 text-[#A65A3C]"><Sparkles size={16} /><p className="text-[11px] font-semibold uppercase tracking-[0.2em]">Have something in mind?</p></div><h2 className="display-font mt-4 text-3xl leading-tight sm:text-4xl">Let’s make your next idea useful.</h2><p className="mt-3 text-sm leading-7 text-[#766C64]">I’m open to conversations about thoughtful websites, e-commerce stores, and web applications.</p></div>
+            <div className="max-w-2xl"><div className="flex items-center gap-2 text-[#A65A3C]"><Sparkles size={16} /><p className="text-[11px] font-semibold uppercase tracking-[0.2em]">Have something in mind?</p></div><h2 className="display-font mt-4 text-3xl capitalize leading-tight sm:text-4xl">Let’s make your next idea useful.</h2><p className="mt-3 capitalize text-sm leading-7 text-[#766C64]">I’m open to conversations about thoughtful websites, e-commerce stores, and web applications.</p></div>
             <a href="/contact" className="inline-flex w-fit items-center gap-3 rounded-full bg-[#B65C3A] px-5 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#98482D]">Start a conversation<ArrowUpRight size={16} /></a>
           </div>
         </section>
