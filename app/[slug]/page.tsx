@@ -1,20 +1,17 @@
+
 import { notFound } from "next/navigation";
-import About from "@/components/About";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
-import Contact from "@/components/Contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const pages = {
-  about: About,
   services: Services,
   projects: Projects,
   experience: Experience,
-  contact: Contact,
 };
-  
+
 export function generateStaticParams() {
   return Object.keys(pages).map((slug) => ({ slug }));
 }
