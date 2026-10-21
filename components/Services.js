@@ -116,7 +116,7 @@ export default function Services() {
       </div>
 
       <a
-        href="#contact"
+        href="/contact"
         className="inline-flex w-fit items-center gap-4 rounded-full bg-[#171717] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b65c3a]"
       >
         Start a Conversation

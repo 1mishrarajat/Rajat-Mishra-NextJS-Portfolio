@@ -50,7 +50,7 @@ export default function Hero() {
       {/* Action buttons */}
       <div className="reveal-up mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
         <a
-          href="#projects"
+          href="/project"
           className="group inline-flex min-h-14 items-center capitalize  justify-center gap-3 rounded-full bg-[#171717] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:bg-[#b65c3a] hover:shadow-xl"
         >
           Explore my work

@@ -2,74 +2,20 @@
 "use client";
 
 import { useState } from "react";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   ArrowDownRight,
-  ArrowRight,
   ArrowUpRight,
-  Check,
   CheckCircle2,
-  Code2,
   Mail,
   MapPin,
   MessageCircle,
-  Search,
   Send,
-  ShoppingBag,
-  Smartphone,
   Sparkles,
   Workflow,
 } from "lucide-react";
-
-const services = [
-  {
-    number: "01",
-    title: "Web Development",
-    description:
-      "Modern, responsive websites built for performance and growth.",
-    icon: Code2,
-  },
-  {
-    number: "02",
-    title: "E-commerce Solutions",
-    description:
-      "Scalable online stores with seamless shopping experiences.",
-    icon: ShoppingBag,
-  },
-  {
-    number: "03",
-    title: "SEO & Digital Growth",
-    description:
-      "Improve visibility, reach the right audience, and grow online.",
-    icon: Search,
-  },
-  {
-    number: "04",
-    title: "UI/UX & Web Design",
-    description:
-      "Thoughtful interfaces that look beautiful and feel intuitive.",
-    icon: Smartphone,
-  },
-];
-
-const projectTypes = [
-  "Website Development",
-  "E-commerce Website",
-  "UI/UX Design",
-  "SEO & Digital Marketing",
-  "Website Redesign",
-  "Something Else",
-];
-
-const budgets = [
-  "Under ₹10,000",
-  "₹10,000–₹25,000",
-  "₹25,000–₹50,000",
-  "₹50,000–₹1,00,000",
-  "Above ₹1,00,000",
-  "Not sure yet",
-];
 
 const emailAddress = "rajatmishra74150@gmail.com";
 
@@ -80,10 +26,11 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    service: "",
-    budget: "",
+    subject: "",
     message: "",
   });
+  const [isSending, setIsSending] = useState(false);
+  const [emailStatus, setEmailStatus] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -94,32 +41,29 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  setIsSending(true);
+  setEmailStatus("");
 
-    const subject = encodeURIComponent(
-      `Project Inquiry from ${formData.name}`
-    );
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-    const body = encodeURIComponent(
-      `Hello Rajat,
+    if (!res.ok) throw new Error("Request failed");
 
-I would like to discuss a project with you.
-
-Name: ${formData.name}
-Email: ${formData.email}
-Service: ${formData.service || "Not specified"}
-Budget: ${formData.budget || "Not specified"}
-
-Project Details:
-${formData.message}
-
-Looking forward to hearing from you.`
-    );
-
-    window.location.href =
-      `mailto:${emailAddress}?subject=${subject}&body=${body}`;
-  };
+    setEmailStatus("success");
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  } catch (error) {
+    console.error("Email sending failed:", error);
+    setEmailStatus("error");
+  } finally {
+    setIsSending(false);
+  }
+};
 
   return (
     <>
@@ -362,7 +306,7 @@ Looking forward to hearing from you.`
                     </a>
 
                     <a
-                      href="https://www.linkedin.com/"
+                      href="https://www.linkedin.com/in/rajat-mishra-6a0822255/"
                       target="_blank"
                       rel="noreferrer"
                       className="group inline-flex items-center gap-2 rounded-full border border-[#E1D3C7] bg-white/60 px-5 py-3 text-sm font-medium transition duration-300 hover:border-[#A95739] hover:bg-[#A95739] hover:text-white"
@@ -448,54 +392,24 @@ Looking forward to hearing from you.`
                       </div>
                     </div>
 
-                    <div className="grid gap-5 sm:grid-cols-2">
-                      <div>
-                        <label
-                          htmlFor="service"
-                          className="mb-2.5 block text-xs font-semibold text-[#50443B]"
-                        >
-                          What do you need?
-                        </label>
+                    <div>
+                      <label
+                        htmlFor="subject"
+                        className="mb-2.5 block text-xs font-semibold text-[#50443B]"
+                      >
+                        Subject <span className="text-[#A95739">*</span>
+                      </label>
 
-                        <select
-                          id="service"
-                          name="service"
-                          value={formData.service}
-                          onChange={handleChange}
-                          className={inputClass}
-                        >
-                          <option value="">Select a service</option>
-                          {projectTypes.map((type) => (
-                            <option key={type} value={type}>
-                              {type}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="budget"
-                          className="mb-2.5 block text-xs font-semibold text-[#50443B]"
-                        >
-                          Estimated budget
-                        </label>
-
-                        <select
-                          id="budget"
-                          name="budget"
-                          value={formData.budget}
-                          onChange={handleChange}
-                          className={inputClass}
-                        >
-                          <option value="">Choose your budget</option>
-                          {budgets.map((budget) => (
-                            <option key={budget} value={budget}>
-                              {budget}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
+                      <input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        required
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="Enter your subject"
+                        className={inputClass}
+                      />
                     </div>
 
                     <div>
@@ -521,86 +435,36 @@ Looking forward to hearing from you.`
 
                     <button
                       type="submit"
-                      className="group flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[#A95739] px-6 py-4 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(169,87,57,0.16)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#87432D] hover:shadow-[0_15px_35px_rgba(169,87,57,0.24)]"
+                      disabled={isSending}
+                      className="group flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[#A95739] px-6 py-4 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(169,87,57,0.16)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#87432D] hover:shadow-[0_15px_35px_rgba(169,87,57,0.24)] disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      Send project inquiry
-                      <Send
-                        size={17}
-                        className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
-                      />
+                      {isSending ? "Sending..." : "Send project inquiry"}
+                      {!isSending && (
+                        <Send
+                          size={17}
+                          className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
+                        />
+                      )}
                     </button>
 
+                    {emailStatus === "success" && (
+                      <p role="status" className="text-center text-sm font-medium text-green-700">
+                        Your message has been sent successfully!
+                      </p>
+                    )}
+
+                    {emailStatus === "error" && (
+                      <p role="alert" className="text-center text-sm font-medium text-red-600">
+                        Failed to send your message. Please try again.
+                      </p>
+                    )}
+
                     <p className="text-center text-xs leading-6 text-[#9A8B7F]">
-                      Your inquiry opens in your default email application.
-                      No information is stored by this form.
+                      Your message will be sent securely through the email service.
                     </p>
                   </form>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICES SECTION */}
-        <section className="border-y border-[#E8D9CD] bg-[#F4ECE3] px-5 py-20 sm:px-8 sm:py-24 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <div>
-                <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#A95739]">
-                  <span className="h-px w-8 bg-[#A95739]" />
-                  What I can help with
-                </p>
-
-                <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight tracking-[-0.055em] sm:text-5xl">
-                  The right expertise {" "}
-                  <span className="font-serif italic text-[#A95739]">
-                   for your next move.
-                  </span>
-                </h2>
-              </div>
-
-            </div>
-
-            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {services.map((service) => {
-                const Icon = service.icon;
-
-                return (
-                  <a
-                    href="#contact-form"
-                    key={service.number}
-                    className="group relative overflow-hidden rounded-2xl border border-[#E2D1C3] bg-[#FCF8F3] p-6 transition duration-500 hover:-translate-y-2 hover:border-[#C99A7F] hover:shadow-[0_20px_45px_rgba(70,45,29,0.08)] sm:p-7"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-semibold tracking-[0.15em] text-[#B19A88]">
-                        {service.number}
-                      </span>
-
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F1E3D7] text-[#A95739] transition duration-500 group-hover:rotate-6 group-hover:bg-[#A95739] group-hover:text-white">
-                        <Icon size={21} strokeWidth={1.7} />
-                      </div>
-                    </div>
-
-                    <h3 className="mt-8 text-xl font-medium tracking-[-0.04em] text-[#302821]">
-                      {service.title}
-                    </h3>
-
-                    <p className="mt-3 text-sm leading-7 text-[#817166]">
-                      {service.description}
-                    </p>
-
-                    <div className="mt-7 flex items-center gap-2 text-xs font-semibold text-[#A95739]">
-                      Let&apos;s discuss
-                      <ArrowRight
-                        size={15}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      />
-                    </div>
-
-                    <div className="pointer-events-none absolute -bottom-12 -right-12 h-28 w-28 rounded-full bg-[#E7CDBA]/30 blur-2xl transition duration-500 group-hover:bg-[#D9AE92]/40" />
-                  </a>
-                );
-              })}
             </div>
           </div>
         </section>
@@ -664,3 +528,4 @@ Looking forward to hearing from you.`
     </>
   );
 }
+

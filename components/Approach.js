@@ -84,7 +84,7 @@ export default function Approach() {
   <div className="mt-5 flex items-center gap-4">
 
     <a
-      href="#projects"
+      href="/project"
       className="group inline-flex items-center gap-4 rounded-xl bg-[#b65c3a] px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c96d49] hover:shadow-[0_12px_30px_rgba(182,92,58,0.22)]"
     >
       Explore My Work
