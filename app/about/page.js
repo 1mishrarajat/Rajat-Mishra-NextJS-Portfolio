@@ -112,7 +112,7 @@ export default function AboutPage() {
 
       <main className="overflow-hidden bg-[#FCF8F3] pt-[76px] text-[#20201E]">
         {/* INTRODUCTION */}
-<section className="relative overflow-hidden py-8 md:py-16">
+<section className="relative overflow-hidden py-12">
   <div className="container-page relative">
 
 

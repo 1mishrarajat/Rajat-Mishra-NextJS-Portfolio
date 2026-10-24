@@ -89,74 +89,76 @@ export default function About() {
         {/* =================================================
             STATS
         ================================================= */}
-        <div className="mt-10 grid grid-cols-1 border-y border-[#e5dbd1] sm:grid-cols-3">
 
-          {[
-            ["1.9+", "Years Experience"],
-            ["15+", "Technologies"],
-            ["10+", "Web Projects"],
-          ].map(([number, label], index) => (
-            <div
-              key={label}
-              className={`flex items-center gap-4 py-6 sm:justify-center sm:py-7 ${
-                index !== 0 ? "border-t border-[#e5dbd1] sm:border-l sm:border-t-0" : ""
-              }`}
+<div className="relative mt-4 overflow-hidden rounded-2xl border border-[#eadbd2] bg-gradient-to-br from-[#fffdfb] via-[#fff9f5] to-[#fdf0e9] shadow-[0_12px_35px_rgba(113,61,70,0.06)]">
+  <div className="grid grid-cols-1 divide-y divide-[#eadbd2] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+    {[
+      ["1.9+", "Years Experience"],
+      ["15+", "Technologies"],
+      ["10+", "Web Projects"],
+    ].map(([number, label], index) => (
+      <div
+        key={label}
+        className="group flex items-center gap-4 px-5 py-6 transition-colors duration-300 hover:bg-white/60 sm:justify-center sm:px-4 sm:py-8 lg:gap-5 lg:px-6"
+      >
+        {/* Icon */}
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#edd8cf] bg-white text-[#a95743] shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+          {index === 0 && (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              className="h-5 w-5"
             >
-              {/* Icon */}
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f6e9df] text-[#b65c3a]">
-                {index === 0 && (
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-5 w-5"
-                  >
-                    <rect x="3" y="7" width="18" height="13" rx="2" />
-                    <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                  </svg>
-                )}
+              <rect x="3" y="7" width="18" height="13" rx="2" />
+              <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+            </svg>
+          )}
 
-                {index === 1 && (
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-5 w-5"
-                  >
-                    <path d="m12 3 8 4-8 4-8-4 8-4Z" />
-                    <path d="m4 12 8 4 8-4" />
-                    <path d="m4 17 8 4 8-4" />
-                  </svg>
-                )}
+          {index === 1 && (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              className="h-5 w-5"
+            >
+              <path d="m12 3 8 4-8 4-8-4 8-4Z" />
+              <path d="m4 12 8 4 8-4" />
+              <path d="m4 17 8 4 8-4" />
+            </svg>
+          )}
 
-                {index === 2 && (
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-5 w-5"
-                  >
-                    <path d="M4 5h16v14H4z" />
-                    <path d="M8 9h8M8 13h5" />
-                  </svg>
-                )}
-              </div>
-
-              <div className="flex items-center gap-3 sm:block">
-                <div className="display-font text-3xl leading-none text-[#171717] sm:text-4xl">
-                  {number}
-                </div>
-
-                <div className="mt-2 text-[14px] font-medium capitalize tracking-[0.12em] text-[#81776e]">
-                  {label}
-                </div>
-              </div>
-            </div>
-          ))}
+          {index === 2 && (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              className="h-5 w-5"
+            >
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <path d="M3 9h18M7 6.5h.01M10 6.5h.01M13 6.5h.01M7 13h10M7 16h6" />
+            </svg>
+          )}
         </div>
+
+        {/* Number and label */}
+        <div className="min-w-0">
+          <div className="display-font text-3xl font-semibold leading-none tracking-tight text-[#713d46] sm:text-3xl lg:text-4xl">
+            {number}
+          </div>
+
+          <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#81736d] sm:text-[10px] lg:text-xs">
+            {label}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
 
 
