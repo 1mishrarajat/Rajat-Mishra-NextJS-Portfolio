@@ -37,43 +37,55 @@ export default function BlogPage() {
           </div>
 
           {/* Article Cards */}
-          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post) => (
-              <article
-                key={post.title}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#EAD7D7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#D6B5B5] hover:shadow-[0_18px_45px_rgba(113,61,70,0.10)]"
-              >
-                <div className="relative  overflow-hidden bg-[#F2E5DA] ">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  </div>
+  <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+  {blogPosts.map((post) => (
+    <article
+      key={post.title}
+      className="group h-full"
+    >
+      <Link
+        href={post.slug}
+        aria-label={`Read article: ${post.title}`}
+        className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#EAD7D7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#D6B5B5] hover:shadow-[0_18px_45px_rgba(113,61,70,0.10)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A454D] focus-visible:ring-offset-4"
+      >
+        {/* Blog Image */}
+        <div className="relative aspect-[16/10] overflow-hidden bg-[#F2E5DA]">
+          <img
+            src={post.image}
+            alt={post.title}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
 
-                <div className="flex flex-1 flex-col p-2">
-                  <h2 className="font-serif text-2xl leading-snug text-[#211D1A] transition-colors duration-300 group-hover:text-[#9A454D]">
-                    {post.title}
-                  </h2>
+        {/* Blog Content */}
+        <div className="flex flex-1 flex-col p-5 sm:p-6">
+          <h2 className="font-serif text-xl leading-snug text-[#211D1A] transition-colors duration-300 group-hover:text-[#9A454D] sm:text-2xl">
+            {post.title}
+          </h2>
 
-                  <p className="my-3 flex-1 text-[16px] text-justify leading-7 text-[#71665D]">
-                    {post.description}
-                  </p>
+          <p className="mt-3 flex-1 text-[15px] leading-7 text-[#71665D]">
+            {post.description}
+          </p>
 
-                  <div className="mt-2 border-t border-[#F0E4E1] p-5">
-                    <a
-                      href={post.slug}
-                      aria-label={`Read article: ${post.title}`}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#9A454D] transition-all duration-300 hover:gap-3"
-                    >
-                      Read Article <span aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-            ))}
+          {/* Read Article */}
+          <div className="mt-5 flex items-center justify-between border-t border-[#F0E4E1] pt-4">
+            <span className="text-sm font-semibold text-[#9A454D]">
+              Read Article
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#EAD7D7] text-[#9A454D] transition-all duration-300 group-hover:border-[#9A454D] group-hover:bg-[#9A454D] group-hover:text-white"
+            >
+              →
+            </span>
           </div>
+        </div>
+      </Link>
+    </article>
+  ))}
+</div>
         </section>
       </main>
 
