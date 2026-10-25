@@ -49,7 +49,7 @@ export default function BlogPage() {
         className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#EAD7D7] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#D6B5B5] hover:shadow-[0_18px_45px_rgba(113,61,70,0.10)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A454D] focus-visible:ring-offset-4"
       >
         {/* Blog Image */}
-        <div className="relative aspect-[16/10] overflow-hidden bg-[#F2E5DA]">
+        <div className="relative overflow-hidden bg-[#F2E5DA]">
           <img
             src={post.image}
             alt={post.title}
