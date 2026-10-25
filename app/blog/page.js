@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import Link from "next/link";
 const blogPosts = [
 {
   title: "PHP 8.5: What's New?",
