@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, Check, ChevronLeft, ChevronRight, ArrowLeft, ArrowRight, Code2, ExternalLink, Github, Layers3, Mail, Menu, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, Check, ChevronLeft, ChevronRight, ArrowLeft, ArrowRight, Download, Code2, ExternalLink, Github, Layers3, Mail, Menu, Sparkles, X } from "lucide-react";
 
 
 export default function Hero() {
@@ -60,14 +60,18 @@ export default function Hero() {
           />
         </a>
 
-        <a
-          href="mailto:rajatmishra74150@gmail.com"
-          className="inline-flex min-h-14 items-center capitalize  justify-center gap-2.5 rounded-full border border-black/10 bg-white/60 px-7 py-4 text-sm font-semibold text-[#171717] transition duration-300 hover:-translate-y-1 hover:border-black/20 hover:bg-white"
-        >
-          <Mail size={17} />
-          Let&apos;s connect
-        </a>
-      </div>
+ <a
+  href="/resume/Rajat-Mishra-Resume.pdf"
+  download="Rajat-Mishra-Resume.pdf"
+  className="group inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full border border-[#b65c3a]/30 bg-white/70 px-7 py-4 text-sm font-semibold text-[#171717] transition duration-300 hover:-translate-y-1 hover:border-[#b65c3a] hover:bg-white"
+>
+  <Download
+    size={18}
+    className="transition-transform duration-300 group-hover:translate-y-0.5"
+  />  
+  Download Resume
+</a>
+      </div>   
 
     </div>
 
