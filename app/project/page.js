@@ -5,17 +5,42 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 
 const projects = [
   { title: "Journal System", category: "Publication Platform", description: "A publishing platform with reusable interfaces, multiple theme variations, and responsive workflows.", stack: ["React.js", "CodeIgniter 4", "MySQL"], image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=85", url: "https://default-theme.openjournalcloud.com/", extraLinks: [{ label: "Classic theme", url: "https://classic-theme.openjournalcloud.com/" }] },
-  { title: "Car Insurance System", category: "Web Application", description: "A responsive insurance application built around a clear and accessible customer experience.", stack: ["Next.js", "PHP"], image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1400&q=85", url: "https://umbrellainsurance.ie/" },
+  { title: "Car Insurance System", category: "Web Application", description: "A responsive insurance application built around a clear and accessible customer experience.", stack: ["Next.js", "PHP"], image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1400&q=85", url: "https://car-insurance-omega.vercel.app/" },
   { title: "Aldhaif Transport", category: "Business Website", description: "A polished, responsive business website with WordPress theme customization and performance improvements.", stack: ["WordPress", "PHP", "JavaScript"], image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1400&q=85", url: "https://aldhaiftransport.ae/" },
   { title: "Hillside Family Medicine", category: "Healthcare", description: "A healthcare website focused on useful content, accessibility, and a responsive experience across devices.", stack: ["WordPress", "PHP", "JavaScript"], image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=85", url: "https://hillsidefamilymedicine.org/" },
-  { title: "HF69 Perfumes", category: "E-commerce", description: "A responsive perfume store designed to make product discovery clear and enjoyable.", stack: ["WordPress", "WooCommerce", "PHP"], image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1400&q=85", url: "https://hf69perfume.com/" },
   { title: "Thermoglaze", category: "Business Website", description: "Responsive interface refinements and performance improvements for a stronger browsing experience.", stack: ["WordPress", "PHP", "CSS", "JavaScript"], image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85", url: "https://thermoglaze.ie/" },
   { title: "Paudhshala", category: "E-commerce", description: "A Magento storefront with responsive components, modern product presentation, and utility-first styling.", stack: ["Magento 2", "Hyvä", "Tailwind CSS"], image: "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1400&q=85", url: "https://paudhshala.com/" },
-  { title: "Rise Commerce", category: "E-commerce", description: "Magento storefront customization with responsive layouts and a conversion-focused shopping experience.", stack: ["Magento 2", "Hyvä", "Tailwind CSS"], image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=85", url: "https://risecommerce.com/" },
-  { title: "HyväGo", category: "E-commerce", description: "A modern Magento storefront implementation with responsive theme customization.", stack: ["Magento 2", "Hyvä", "PHP"], image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=1400&q=85", url: "https://demo.hyvago.com/hd/" },
+{
+  title: "Web Scraping – Online Store",
+  category: "E-commerce",
+  description:
+    "A responsive e-commerce website built with WordPress and WooCommerce, featuring product listings, an intuitive shopping experience, and an easy-to-use storefront.",
+  stack: ["WordPress", "WooCommerce", "PHP"],
+  image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1400&q=85",
+  url: "https://shop.easycheapwebscraping.com/",
+},
+  { title: "Home Furniture", category: "E-commerce", description: "A modern Magento storefront implementation with responsive theme customization.", stack: ["Magento 2", "Hyvä", "PHP"], image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85", url: "https://demo.hyvago.com/hd/" },
   { title: "Diamond King Tools", category: "E-commerce", description: "A customized shopping experience and responsive storefront built with Magento technologies.", stack: ["Magento 2", "Hyvä", "PHP"], image: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1400&q=85", url: "https://diamondkingtools.com/" },
   { title: "InvoiceScheduler", category: "Web Application", description: "An invoice management and scheduling platform with PDF generation, email automation, API integration, and responsive dashboard workflows.", stack: ["PHP", "MySQL", "REST API", "PDF Generation"], image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=85", url: "https://invoicescheduler.com/" },
   { title: "Vdesis Events", category: "Events Website", description: "An events website that presents event information and details through a responsive web experience.", stack: ["Symfony", "PHP", "MySQL", "JavaScript"], image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=85", url: "https://events.vdesis.com/" },
+  {
+  title: "School – Education Platform",
+  category: "Freelance",
+  description:  
+    "An educational platform designed to provide a user-friendly learning experience with a clean, responsive interface.",
+  stack: ["WordPress", "PHP", "CSS", "JavaScript"], 
+image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=85",
+  url: "https://devschool.infinityfreeapp.com/",
+},
+{
+  title: "Online Journal  Platform",
+  category: "Ojs Development",
+  description:
+    "An academic journal publishing platform built using Open Journal Systems (OJS), designed to manage scholarly publications, journal submissions, editorial workflows, and research articles.",
+  stack: ["OJS", "PHP", "MySQL"],
+image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1400&q=85",
+  url: "https://clprj.com/journal",
+},
 ];
 
 export default function ProjectPage() {
