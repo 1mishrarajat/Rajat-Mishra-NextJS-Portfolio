@@ -41,6 +41,15 @@ image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format
 image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1400&q=85",
   url: "https://clprj.com/journal",
 },
+{
+  title: "FreelanceMart eCommerce Marketplace",
+  category: "eCommerce Development",
+  description:
+    "A modern eCommerce marketplace built using Next.js and Tailwind CSS, featuring responsive UI, product categories, shopping experience, and a freelancer marketplace.",
+  stack: ["Next.js", "React.js", "Tailwind CSS"],
+  image: "/images/FreelanceMart.png",
+  url: "https://freelancemart-ecommerce.vercel.app/",
+},
 ];
 
 export default function ProjectPage() {
