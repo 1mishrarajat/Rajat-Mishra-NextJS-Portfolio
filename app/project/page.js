@@ -46,7 +46,7 @@ image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format
   category: "eCommerce Development",
   description:
     "A modern eCommerce marketplace built using Next.js and Tailwind CSS, featuring responsive UI, product categories, shopping experience, and a freelancer marketplace.",
-  stack: ["Next.js", "React.js", "Tailwind CSS"],
+  stack: ["Next.js", "React.js", "Tailwind CSS", "API Integration"],
   image: "/images/FreelanceMart.png",
   url: "https://freelancemart-ecommerce.vercel.app/",
 },
