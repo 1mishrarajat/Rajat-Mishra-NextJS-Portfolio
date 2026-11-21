@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const stats = [
-  { value: "1.9+ ", label: "Years of experience" },
+  { value: "2 ", label: "Years of experience" },
   { value: "10+", label: "Projects worked on" },
   { value: "15+", label: "Technologies explored" },
 ];
@@ -139,7 +139,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F0DFD3]">
               <span className="display-font text-xl text-[#A65A3C]">
-                1.9+ 
+                2+ 
               </span>  
             </div>
             <div>
