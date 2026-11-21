@@ -182,7 +182,7 @@ export default function AboutPage() {
 
         {/* Short introduction */}
         <p className="mt-7 max-w-xl md:text-[16px]  text-[15px] capitalize text-justify leading-8 text-[#655D56]  sm:leading-9">
-          I’m Rajat Mishra, a Full Stack Web Developer with 1.9+ years
+          I’m Rajat Mishra, a Full Stack Web Developer with 2 years
           of professional experience creating responsive websites and
           web applications that combine thoughtful design with reliable
           functionality.

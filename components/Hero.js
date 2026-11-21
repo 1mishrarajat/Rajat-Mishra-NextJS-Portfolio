@@ -132,7 +132,7 @@ export default function Hero() {
           </div>
           <div>
             <p className="text-lg font-bold leading-tight text-[#171717]">
-              1.9+ years
+              2 years
             </p>
             <p className="mt-1 capitalize text-[14px] text-[#b65c3a] font-bold">
               Built to Perform.

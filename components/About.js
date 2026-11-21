@@ -93,7 +93,7 @@ export default function About() {
 <div className="relative mt-4 overflow-hidden rounded-2xl border border-[#eadbd2] bg-gradient-to-br from-[#fffdfb] via-[#fff9f5] to-[#fdf0e9] shadow-[0_12px_35px_rgba(113,61,70,0.06)]">
   <div className="grid grid-cols-1 divide-y divide-[#eadbd2] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
     {[
-      ["1.9+", "Years Experience"],
+      ["2+", "Years Experience"],
       ["15+", "Technologies"],
       ["10+", "Web Projects"],
     ].map(([number, label], index) => (
